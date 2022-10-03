@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+
+
+<!-- HEADER -->
+<div class="header">
+    <a href="home.html">
+        <img src="photos/coffeeshoplogo.png" alt="fiorilogo" width="60" height="45">
+        <h2>fiori e caffè shop</h2> 
+    </a>
+
+    
+    <div class="header-right">
+        <div class="navbar">
+            
+
+                <button class="dropbtn">Shop
+                <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+                </button>
+                    <div class="dropbtn-contents">
+                        <a href="flowers.html">Flowers</a>
+                        <a href="#coffee">Coffee</a>
+
+                    
+                    </div>
+                </div>
+
+
+                    <div class="contents">
+                        <a href="#services">Services</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact Us</a>
+            
+                    </div>
+        </div>
+    </div>
+        
+
+
+
+    <!-- BODY -->
+
+        <!-- Slideshow Container  -->
+    <div class="image-slideshow-container">
+        <!--image 1 --> 
+        <div class="imageSlides">
+            <div class="numberText">1 / 3</div>
+            <img src="photos/pic1.jpg" alt="firstphoto" >
+            <div class="text">
+                <h1>A Picture</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Culpa aperiam obcaecati eum asperiores soluta ipsam neque illo maiores id beatae quis iure, veritatis in earum, ab rerum sint error facilis.</div>
+        </div>
+
+        <!-- image 2 -->
+        <div class="imageSlides">
+            <div class="numberText">2 / 3</div>
+            <img src="photos/pic2.jpg" alt="secondphoto">
+            <div class="text">
+                <h1>A Picture</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Culpa aperiam obcaecati eum asperiores soluta ipsam neque illo maiores id beatae quis iure, veritatis in earum, ab rerum sint error facilis.</div>
+        </div>
+
+        <!-- image 3 -->
+        <div class="imageSlides">
+            <div class="numberText">3 / 3</div>
+            <img src="photos/pic3.jpg" alt="thirdphoto" >
+            <div class="text">
+                <h1>A Picture</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Culpa aperiam obcaecati eum asperiores soluta ipsam neque illo maiores id beatae quis iure, veritatis in earum, ab rerum sint error facilis.</div>
+        </div>
+
+        
+    </div>
+    
+    <br>
+ <!-- BUTTONS -->
+ <div class="button-container">
+    <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-circle-left" aria-hidden="true" ></i></a>
+    <a class="next" onclick="plusSlides(1)"><i class="fa fa-chevron-circle-right" aria-hidden="true" ></i></a>
+   </div>
+<div style="padding-left: 50%;">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+   
+    <!-- VIDEO -->
+    <h1 class="sample-text">A SAMPLE VIDEO</h1>
+    <div class="video-div">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Faow3SKIzq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footermain">
+    <div class="footerbox">
+
+        <div class="footer-container">
+            <p class="footer-text">
+                fiori e caffè shop <sup>© </sup>2022 
+            </p>
+        </div>
+        
+    </div>
+    </footer>
+
+   
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+         showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n){
+        showSlides(slideIndex = n);
+        }
+
+    function showSlides(n){
+
+    let i;
+    let slides = document.getElementsByClassName("imageSlides");
+    let dots = document.getElementsByClassName("dot");
+
+
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) { slideIndex = slides.length}
+    for(i = 0; i < slides.length; i++){
+        slides[i].style.display ="none";
+    }
+
+    for(i=0; i < dots.length; i++){
+
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+
+
+
+
+    </script>
+    
+
+
+</body>
+
+</html>
